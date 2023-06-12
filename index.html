@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,58 +8,54 @@
 
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- link para o font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- link para o google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-        rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-    <div class="weather">
+    <div class="card">
         <div class="form">
-            <input type="text" placeholder="Busque por uma cidade aqui... " id="search-city">
-            <button class="fas fa-search" onclick="getData()"></button>
+            <input type="text" placeholder="Pesquise por uma cidade aqui... " id="search-city">
+            <button class="fas fa-search" onclick="getData()" type="submit"></button>
         </div>
 
-        <div class="infos">
-            <div class="info1">
-                <span id="city">
-
-                </span>
-
-                <span id="temp">
-
-                </span>
-
-                <span id="desc">
-
-                </span>
-            </div>
-
-            <div class="info2">
-                <div class="line">
-                    <span id="humi"></span>
-                    <span id="wind"></span>
+        <div id="weather-container" class="hide">
+            <div class="infos-block1">
+                <div class="city">
+                    <i class="fas fa-location-dot"></i>
+                    <span id="city-span"></span>
                 </div>
-
-                <div class="line">
-                    <span id="press"></span>
-                    <span id="country"></span>
+                <div class="temp">
+                    <span id="temp-span"></span>
+                </div>
+                <div class="desc">
+                    <span id="desc-span"></span>
+                    <img id="desc-icon">
                 </div>
             </div>
-
+            <div class="infos-block2">
+                <div class="block1">
+                    <div class="humi">
+                        <span id="humi-span"></span>
+                        <i class="fas fa-droplet"></i>
+                    </div>
+                    <div class="press">
+                        <span id="press-span"></span>
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <div class="block2">
+                    <div class="wind">
+                        <span id="wind-span"></span>
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <div class="country">
+                        <span id="country-span"></span>
+                        <img id="country-flag">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <script src="js/script.js"></script>
 </body>
-
 </html>

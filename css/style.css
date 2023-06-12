@@ -4,124 +4,121 @@
     padding: 0;
 }
 
-/* tags genéricas */
-body {
-    background-image: linear-gradient(45deg, rgb(0, 166, 255), white);
-    height: 100vh;
-    display: flex;
-    font-family: 'Ubuntu', sans-serif;
-    text-align: center;
+.hide {
+    display: none;
 }
 
-/* estilizando meu card */
-div.weather {
-    background-color: white;
+/* tags genéricas */
+body {
+    background-image: url("../imagens/background.jpg");
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    display: flex;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* card */
+div.card {
+    background-image: linear-gradient(45deg, rgb(0, 183, 255), rgb(63, 102, 255));
     width: 500px;
-    max-width: 500px;
-    border-radius: 10px;
     margin: auto;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
     padding: 20px;
-    color: rgb(80, 80, 80);
+    font-size: 30px;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
 }
 
 /* estilizando meu formulário */
-div.weather div.form {
+div.form {
     display: flex;
-    margin: 0px 0px 10px 0px;
 }
 
-div.weather div.form input {
+div.form input {
     flex: 1;
     height: 30px;
+    border-radius: 5px;
     margin-right: 10px;
     font-size: 20px;
-    border-radius: 5px;
-    background-color: rgb(240, 240, 240);
 }
 
-div.weather div.form button {
+div.form button {
     width: 50px;
-    max-width: 50px;
+    height: 34px;
     border-radius: 5px;
-    background-color: rgb(240, 240, 240);
 }
 
-/* estilizando a sessão aonde aparecem as informações do clima */
-div.weather div#infos {
-    padding: 10px 0px;
+/* estilizando a primeira sessão das minhas informações */
+div.card div.infos-block1{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 20px 0px;
+    margin: 20px 0px;
 }
 
-/* primeira sessão da minhas infos */
-div.weather div.infos div.info1 span#city {
-    font-size: 35px;
+div.card div.infos-block1 div.city {
     text-align: center;
-    display: block;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-div.weather div.infos div.info1 span#temp {
-    font-size: 70px;
+div.card div.infos-block1 div.temp {
     text-align: center;
-    display: block;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 75px;
 }
 
-div.weather div.infos div.info1 span#desc {
-    font-size: 35px;
+div.card div.infos-block1 div.desc {
     text-align: center;
-    display: block;
-    margin-bottom: 20px;
-}
-
-/* segunda sessão da minhas infos */
-div.weather div.infos div.info2 {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-div.weather div.infos div.info2 div.line {
+div.card div.infos-block1 div.desc span {
+    text-transform: capitalize;
+}
+
+/* estilizando a segunda sessão das minhas informações */
+div.card div.infos-block2 {
     display: flex;
+    justify-content: center;
+    margin: 50px 0px 30px 0px;
 }
 
-div.weather div.infos div.info2 div.line span {
-    flex: 0.5;
-}
-
-/* primeira linha */
-div.weather div.infos div.info2 div.line span#humi {
-    font-size: 35px;
+div.card div.infos-block2 div.block1 {
     text-align: right;
-    border-right: 1px solid rgb(80, 80, 80);
-
-    margin: 10px 0px 10px 0px;
-    padding: 0px 10px 0px 0px;
 }
 
-div.weather div.infos div.info2 div.line span#wind {
-    font-size: 35px;
+div.card div.infos-block2 div.block1 div.humi {
+    margin-bottom: 10px;
+    padding-right: 10px;
+    border-right: 1px solid white;
+}
+
+div.card div.infos-block2 div.block1 div.press {
+    padding-right: 10px;
+    border-right: 1px solid white;
+}
+
+div.card div.infos-block2 div.block2 {
     text-align: left;
-
-    margin: 10px 0px 10px 0px;
-    padding: 0px 0px 0px 10px;
 }
 
-/* segunda linha */
-div.weather div.infos div.info2 div.line span#press {
-    font-size: 35px;
-    text-align: right;
-    margin: 10px 0px;
-    border-right: 1px solid rgb(80, 80, 80);
-
-    margin: 10px 0px 10px 0px;
-    padding: 0px 10px 0px 0px;
-}
-
-div.weather div.infos div.info2 div.line span#country {
-    font-size: 35px;
+div.card div.infos-block2 div.block2 div.wind {
     text-align: left;
-    margin: 10px 0px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
 
-    margin: 10px 0px 10px 0px;
-    padding: 0px 0px 0px 10px;
+div.card div.infos-block2 div.block2 div.country {
+    text-align: left;
+    padding-left: 10px;
+}
+
+div.card div.infos-block2 div.block2 div.country img {
+    width: 30px;
 }
