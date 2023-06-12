@@ -1,5 +1,6 @@
 // minhas conexões DOM
 const weather_container = document.getElementById("weather-container");
+
 const search_city = document.getElementById("search-city");
 const city = document.getElementById("city-span");
 const temp = document.getElementById("temp-span");
@@ -22,8 +23,10 @@ API do ícone do clima
 API das bandeiras
 API do background
 */
+
 const apiUnsplash = "https://source.unsplash.com/1600x900/?";
 
+// função que mostra as informações no template
 function showInfos(data, search_city) {
     // preenchendo os meus elementos DOM com textos
     city.innerText = `${data.name}`;
@@ -41,13 +44,14 @@ function showInfos(data, search_city) {
     flag.setAttribute("src", `https://flagsapi.com/${data.sys.country}/flat/64.png`);
 
     
-    // pegando o background
+    // pegando o background e mudando a imagem
     document.body.style.backgroundImage = `url("${apiUnsplash + search_city}")`;
 
+    // mostrando os elementos escondidos
     weather_container.classList.remove("hide");
 }
 
-
+// função que faz a consulta na API
 async function getData() {
     // pegando o valor do input
     const search_city = document.getElementById("search-city").value;
@@ -73,6 +77,7 @@ async function getData() {
         showInfos(data, search_city);
     }
 }
+
 
 // tratando o evento do usuário apertar Enter
 search_city.addEventListener("keyup", (e) => {
